@@ -11,6 +11,7 @@ namespace HomeWork1
         public Fibo() { }
         public void PrintFibonacci(int n)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             Console.WriteLine("Введіть кількість чисел Фібоначчі для генерації:");
             int fibonachiNumbers = int.Parse(Console.ReadLine());
             int a = 0, b = 1;

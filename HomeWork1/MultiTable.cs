@@ -11,6 +11,7 @@ namespace HomeWork1
         public MultiTable() { }
         public void PrintMultiplicationTable(int n)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             Console.WriteLine("Введіть число для множення:");
             int number = int.Parse(Console.ReadLine());
             Console.WriteLine($"Таблиця множення для числа {number}:");

@@ -11,6 +11,7 @@ namespace HomeWork1
         public CheckPrimeNubr() { }
         public void CheckPrimeNumber()
         {
+            Console.OutputEncoding = Encoding.UTF8;
             Console.WriteLine("Введіть число для перевірки на простоту:");
             int number = int.Parse(Console.ReadLine());
             bool isPrime = true;

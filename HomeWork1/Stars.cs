@@ -11,16 +11,18 @@ namespace HomeWork1
        public Stars() { }
         public void PrintStars(int n)
         {
-            if (n <= 0)
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.WriteLine("Введіть кількість рядків графіка:");
+            int numberOfRows = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= numberOfRows; i++)
             {
-                Console.WriteLine("Please enter a positive integer.");
-                return;
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
             }
-            for (int i = 0; i < n; i++)
-            {
-                Console.Write("*");
-            }
-            Console.WriteLine();
+
         }
 
     }

@@ -11,6 +11,7 @@ namespace HomeWork1
        public PrimeNumbers() { }
         public void PrintPrimes(int n)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             Console.WriteLine("Введіть число до якого потрібно знайти прості числа:");
             int limit = int.Parse(Console.ReadLine());
             for (int num = 2; num <= limit; num++)

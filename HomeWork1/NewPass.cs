@@ -12,6 +12,7 @@ namespace HomeWork1
         public NewPass() { }
         public NewPass(string name) 
         {
+            Console.OutputEncoding = Encoding.UTF8;
             Console.WriteLine("Введіть пароль:");
             string password = Console.ReadLine();
             bool isValid = password.Length >= 8 &&

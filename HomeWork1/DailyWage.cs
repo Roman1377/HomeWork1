@@ -11,6 +11,7 @@ namespace HomeWork1
         public DailyWage() { }
         public void CalculateDailyWage()
         {
+            Console.OutputEncoding = Encoding.UTF8;
             Console.WriteLine("Введіть кількість робочих годин:");
             int hoursWorked = int.Parse(Console.ReadLine());
             Console.WriteLine("Введіть погодинну ставку:");
