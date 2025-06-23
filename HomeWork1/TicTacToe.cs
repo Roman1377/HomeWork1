@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace HomeWork1
 {
-    internal class TicTacToe
+class TicTacToe
+
     {
         public TicTacToe() 
         {
