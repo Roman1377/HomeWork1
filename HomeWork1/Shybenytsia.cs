@@ -28,6 +28,7 @@ namespace HomeWork1
 
             char[] guessedLetters = new string('_', targetWord.Length).ToCharArray();
             List<char> usedLetters = new List<char>();
+
             int attempts = 7;
 
             Console.WriteLine("🎮 Гра «Виселиця»");
@@ -35,6 +36,9 @@ namespace HomeWork1
 
             while (attempts > 0 && new string(guessedLetters) != targetWord)
             {
+                Console.Clear();
+                DrawHangman(7 - attempts); // Малюємо виселицю залежно від кількості спроб
+
                 Console.WriteLine("\nСлово: " + string.Join(" ", guessedLetters));
                 Console.WriteLine("Використані літери: " + string.Join(", ", usedLetters));
                 Console.WriteLine($"Залишилось спроб: {attempts}");
@@ -83,7 +87,89 @@ namespace HomeWork1
             {
                 Console.WriteLine($"На жаль, ви програли. Загадане слово було: {targetWord}");
             }
-
         }
+
+        static void DrawHangman(int wrongAttempts)
+        {
+            string[] hangmanStages = new string[]
+            {
+            // 7 спроб
+            @" 
+               -----
+               |   
+               |   
+               |   
+               |  
+               |
+            -----",
+            // 6 спроб
+            @" 
+               -----
+               |   |
+               |   O
+               |   
+               |  
+               |
+            -----",
+            // 5 спроб
+            @" 
+               -----
+               |   |
+               |   O
+               |   |
+               |  
+               |
+            -----",
+            // 4 спроби
+            @" 
+               -----
+               |   |
+               |   O
+               |  /|
+               |  
+               |
+            -----",
+            // 3 спроби
+            @" 
+               -----
+               |   |
+               |   O
+               |  /|\
+               |  
+               |
+            -----",
+            // 2 спроби
+            @" 
+               -----
+               |   |
+               |   O
+               |  /|\
+               |  / 
+               |
+            -----",
+            // 1 спроба
+            @" 
+               -----
+               |   |
+               |   O
+               |  /|\
+               |  / \
+               |
+            -----",
+            // 0 спроб - за шию його =)
+            @" 
+               -----
+               |   |
+               |   O
+               |  /|\ 
+               |  / \
+               |
+            -----"
+            };
+
+            Console.WriteLine(hangmanStages[wrongAttempts]);
+        }
+
     }
 }
+
